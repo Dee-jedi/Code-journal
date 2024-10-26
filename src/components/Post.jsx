@@ -41,16 +41,25 @@ const Post = ({ post }) => {
           </p>
         </div>
         <div className="flex gap-3 items-center justify-center">
-          <Link to={`/editpage/${post.id}`}>
-            <button
-              type="button"
-              className="text-2xl text-slate-700 hover:text-teal-500 transition"
+          <div className="relative inline-block">
+            <Link
+              to={`/editpage/${post.id}`}
               onClick={(e) => e.stopPropagation()}
-              aria-label="Edit post"
             >
-              <FaEdit />
-            </button>
-          </Link>
+              <button
+                disabled
+                type="button"
+                className="text-2xl text-slate-700 hover:text-teal-500 transition relative"
+                aria-label="Edit post"
+              >
+                <FaEdit />
+              </button>
+            </Link>
+            <p className="absolute -bottom-1 -right-1 text-[8px] text-orange-200 bg-teal-500 rounded-full px-1.5 py-0.5">
+              SOON
+            </p>
+          </div>
+
           <button
             type="button"
             className="text-xl text-red-500 hover:text-red-600 transition"

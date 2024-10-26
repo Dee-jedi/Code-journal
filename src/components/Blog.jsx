@@ -24,7 +24,7 @@ const Blog = () => {
           <p className="text-gray-700 mb-6">{post.description}</p>
           <div className="border-t border-gray-300 pt-4 mt-6">
             <p className="text-lg text-gray-800">
-              <span className="font-semibold">Price:</span> ${post.price}
+              <span className="font-semibold">Price:</span> #{post.price}
             </p>
             <p className="text-lg text-gray-800">
               <span className="font-semibold">Duration:</span> {post.duration}
