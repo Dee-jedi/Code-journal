@@ -1,0 +1,12 @@
+{
+  "posts": [
+    {
+      "id": "6026263b-9945-48d1-8195-5a28f2b6c4e4",
+      "name": "charis hostel",
+      "description": "In this hostel we offer services that cannot be matched elsewhere. You will be shocked the extent of grace that flows through here, quite intriguing.",
+      "price": "#186000",
+      "duration": "8 months",
+      "imageUrl": "blob:http://localhost:5173/5d6935d2-8d1a-42c0-8d74-59f0dbae7c20"
+    }
+  ]
+}
