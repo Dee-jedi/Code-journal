@@ -29,7 +29,7 @@ const Post = ({ post }) => {
   return (
     <article className="mb-2">
       <div
-        className="bg-white py-4 px-6 rounded-md cursor-pointer flex justify-between items-center shadow-lg hover:shadow-xl transition ease-in-out transform hover:scale-105"
+        className="bg-white py-4 px-6 rounded-md cursor-pointer flex justify-between items-center shadow-lg"
         onDoubleClick={handleDoubleClick}
       >
         <div>

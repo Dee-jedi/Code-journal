@@ -30,13 +30,13 @@ const PostPage = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="lg:px-16 p-4 max-w-4xl mx-auto bg-white shadow-lg rounded-lg"
+      className="lg:px-16 px-4 py-2 max-w-4xl mx-auto bg-white shadow-lg rounded-lg"
     >
-      <h2 className="text-2xl font-semibold text-slate-900 mb-3 text-center">
+      <h2 className="text-xl font-semibold text-slate-900 mb-2 text-center">
         Create a New Post
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
         <InputField
           id={'name'}
           value={name}

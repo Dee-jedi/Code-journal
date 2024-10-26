@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { FaBars, FaTimes } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import SideBar from './SideBar';
+import menu from './../assets/hamburger.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,7 +17,7 @@ const Header = () => {
             <li>
               <Link
                 to="/"
-                className="text-md text-white hover:text-teal-300 transition duration-300"
+                className="text-md text-[#222] hover:text-teal-600 transition duration-300"
               >
                 Home
               </Link>
@@ -25,7 +25,7 @@ const Header = () => {
             <li>
               <Link
                 to="/postpage"
-                className="text-md text-white hover:text-teal-300 transition duration-300"
+                className="text-md text-[#222] hover:text-teal-600 transition duration-300"
               >
                 Post
               </Link>
@@ -33,10 +33,11 @@ const Header = () => {
           </ul>
 
           <button
-            className="text-[#222] text-lg sm:hidden"
+            className="text-[#222] sm:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+            <img src={menu} alt="Open menu" className="h-7 w-7" />
           </button>
         </nav>
       </header>

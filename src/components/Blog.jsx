@@ -8,7 +8,7 @@ const Blog = () => {
   const post = posts.find((post) => post.id.toString() === id);
 
   return (
-    <div className="max-w-2xl mt-6 mx-auto p-6 bg-white shadow-lg rounded-lg">
+    <div className="max-w-2xl mt-6 mx-auto p-6 bg-white shadow-lg">
       {post ? (
         <div>
           <h2 className="text-3xl font-bold text-slate-900 mb-4">
