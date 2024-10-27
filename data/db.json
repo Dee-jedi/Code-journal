@@ -7,6 +7,30 @@
       "price": "#186000",
       "duration": "8 months",
       "imageUrl": "blob:http://localhost:5173/5d6935d2-8d1a-42c0-8d74-59f0dbae7c20"
+    },
+    {
+      "id": "2cbc3c53-6986-4771-971b-3ecf3bf561fc",
+      "name": "Atlantic Height",
+      "description": "wdc",
+      "price": "34234",
+      "duration": "2t43t",
+      "imageUrl": "blob:http://localhost:5173/2113dadb-f0f2-4ecc-aad1-6452f52847d8"
+    },
+    {
+      "id": "026c5b3d-ae4d-4e7e-839f-110bfb83b5c5",
+      "name": "Moremi",
+      "description": "werg",
+      "price": "434534",
+      "duration": "24t2",
+      "imageUrl": "blob:http://localhost:5173/84aa96cf-127f-4a56-bce8-5955424120b4"
+    },
+    {
+      "id": "429c9eaa-945d-42f9-8dab-454196080499",
+      "name": "wogiwergwrg",
+      "description": "wgr",
+      "price": "032923",
+      "duration": "2334",
+      "imageUrl": "blob:http://localhost:5173/2f89b5f8-f186-484d-a4d4-2f781335b964"
     }
   ]
 }

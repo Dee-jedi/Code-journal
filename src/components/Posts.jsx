@@ -9,7 +9,9 @@ const Posts = () => {
     <ul className="flex flex-col gap-1">
       {error && (
         <li>
-          <h2>An error occurred: {error}</h2>
+          <h2 className="text-center text-red-500 text-lg mt-6 ">
+            An error occurred: {error}
+          </h2>
         </li>
       )}
 
@@ -28,7 +30,9 @@ const Posts = () => {
         </li>
       ) : (
         <li>
-          <h2 className="text-center text-lg mt-6 ">No posts available.</h2>
+          <h2 className="text-center text-lg mt-6 ">
+            {error ? '' : 'No posts available.'}
+          </h2>
         </li>
       )}
     </ul>

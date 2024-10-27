@@ -10,7 +10,7 @@ const Header = () => {
     <>
       <header className="flex justify-between items-center h-16 bg-white px-4 md:px-16 shadow-lg">
         <h1 className="text-3xl font-bold text-[#222]">
-          Info <span className="text-teal-600">Hub</span>
+          <span className="text-teal-600">o</span>-Market
         </h1>
         <nav>
           <ul className="sm:flex gap-6 hidden">

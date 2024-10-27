@@ -1,29 +1,40 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { FaEdit, FaTrash } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { DataContext } from '../context/DataContext';
-import Modal from './Modal'; // Import the Modal component
+import Modal from './Modal';
+import AdModal from './AdModal'; // Import the AdModal component
 
 const Post = ({ post }) => {
   const navigate = useNavigate();
   const { handleDelete } = useContext(DataContext);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isAdOpen, setIsAdOpen] = useState(false);
+
+  useEffect(() => {
+    if (!sessionStorage.getItem('viewCount')) {
+      sessionStorage.setItem('viewCount', 0);
+    }
+  }, []);
 
   const handleDoubleClick = () => {
-    navigate(`/blog/${post.id}`);
+    const viewCount = parseInt(sessionStorage.getItem('viewCount'), 10) || 0;
+
+    // Check if the user has viewed 2 posts already
+    if (viewCount >= 2) {
+      setIsAdOpen(true); // Open ad modal
+      sessionStorage.setItem('viewCount', 0); // Reset the count after showing ad
+    } else {
+      sessionStorage.setItem('viewCount', viewCount + 1); // Increment view count
+      navigate(`/blog/${post.id}`);
+    }
   };
 
-  const openModal = () => {
-    setIsModalOpen(true);
-  };
-
-  const closeModal = () => {
-    setIsModalOpen(false);
-  };
-
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
   const confirmDelete = () => {
     handleDelete(post.id);
-    closeModal(); // Close the modal after deletion
+    closeModal();
   };
 
   return (
@@ -65,7 +76,7 @@ const Post = ({ post }) => {
             className="text-xl text-red-500 hover:text-red-600 transition"
             onClick={(e) => {
               e.stopPropagation();
-              openModal(); // Open the modal on delete button click
+              openModal();
             }}
             aria-label="Delete post"
           >
@@ -82,6 +93,15 @@ const Post = ({ post }) => {
         title="Confirm Deletion"
         message={`Are you sure you want to delete the post "${post.name}"? This action cannot be undone.`}
       />
+
+      {/* Ad Modal */}
+      {isAdOpen && (
+        <AdModal
+          isOpen={isAdOpen}
+          onClose={() => setIsAdOpen(false)}
+          videoUrl="https://your-ad-video-url.mp4"
+        />
+      )}
     </article>
   );
 };
