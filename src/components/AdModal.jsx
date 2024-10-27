@@ -10,8 +10,8 @@ const AdModal = ({ isOpen, onClose }) => {
       const adElement = document.createElement('ins');
       adElement.className = 'adsbygoogle';
       adElement.style = 'display:block; width:100%; height:250px;';
-      adElement.setAttribute('data-ad-client', 'ca-pub-xxxxxxxxxxxxxxx'); // Replace with your AdSense publisher ID
-      adElement.setAttribute('data-ad-slot', '1234567890'); // Replace with your AdSense ad slot ID
+      adElement.setAttribute('data-ad-client', 'ca-pub-1234567890123456'); // Test Publisher ID
+      adElement.setAttribute('data-ad-slot', '1234567890'); // Any placeholder ad slot ID
       adElement.setAttribute('data-ad-format', 'auto');
       adElement.setAttribute('data-ad-test', 'on'); // Enables test ads
 
