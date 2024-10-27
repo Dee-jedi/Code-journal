@@ -1,7 +1,5 @@
 import axios from 'axios';
 
 export default axios.create({
-  baseURL: 'http://localhost:5050/',
+  baseURL: 'https://json-1-1vxm.onrender.com ',
 });
-
-/* json-1-1vxm.onrender.com */
